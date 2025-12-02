@@ -1,7 +1,7 @@
 # SQ-7 Hawksgrip
 
 <p align="center">
-  <img src="logo.png" alt="TitanGate Logo" width="400">
+  <img src="logo.png" alt="logo.png" width="400">
 </p>
 
 <p align="center">
