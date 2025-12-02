@@ -83,7 +83,7 @@ The 2019 Aramco attacks exposed a critical vulnerability: traditional air defens
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/SQ-7-Hawksgrip.git
+git clone https://github.com/kaiseer1/SQ-7-Hawksgrip.git
 cd SQ-7-Hawksgrip
 pip install pygame
 ```
