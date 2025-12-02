@@ -20,60 +20,65 @@
 
 ## About
 
-**SQ-7 Hawksgrip** is a distributed autonomous Counter-UAS (C-UAS) defense framework designed to protect critical infrastructure against hostile drone threats. The system employs a swarm of AI-coordinated interceptor drones commanded by a persistent airborne mothership node.
+**SQ-7 Hawksgrip** — *"The Queen of the High Sky"* — is a distributed autonomous Counter-UAS defense framework designed to protect critical infrastructure against hostile drone threats.
 
-This repository contains the **proof-of-concept simulation** demonstrating core system capabilities.
+The system employs a coordinated swarm of AI-powered interceptor drones commanded by a persistent airborne mothership node, using auction-based task allocation for optimal threat response.
 
 ---
 
 ## The Problem
 
-The 2019 Aramco attacks demonstrated a critical vulnerability: defending billion-dollar assets against swarms of cheap drones using traditional air defense systems is economically unsustainable.
+The 2019 Aramco attacks exposed a critical vulnerability: traditional air defense systems are economically unsustainable against cheap drone swarms.
 
-| System | Cost Per Engagement |
-|--------|---------------------|
+| Defense System | Cost Per Engagement |
+|----------------|---------------------|
 | Patriot PAC-3 | $3,000,000 |
 | Stinger MANPADS | $500,000 |
 | Directed Energy | $48,000 |
-| **Hawksgrip** | **$2,000** |
+| **SQ-7 Hawksgrip** | **$2,000** |
 
-**17× cheaper** than conventional systems.
+**Hawksgrip is 17× cheaper than conventional systems.**
 
 ---
 
 ## The Solution
 
-Hawksgrip inverts the cost asymmetry through:
+<p align="center">
+  <img src="https://img.shields.io/badge/Swarm_Intelligence-Distributed-blue.svg">
+  <img src="https://img.shields.io/badge/Task_Allocation-Auction_Based-green.svg">
+  <img src="https://img.shields.io/badge/Engagement-Autonomous-orange.svg">
+</p>
 
-- **Distributed Swarm Intelligence** — Coordinated interceptor fleet
-- **Auction-Based Task Allocation** — Optimal resource utilization
-- **Autonomous Engagement** — Real-time threat response
-- **Scalable Architecture** — Military to infrastructure protection
+- **Mothership Node** — Airborne command platform with multi-sensor detection
+- **Interceptor Swarm** — 6 drones in butterfly formation, expendable design
+- **Auction Protocol** — Real-time bid-based target assignment
+- **Lead Pursuit** — Predictive navigation for optimal interception
 
 ---
 
 ## System Architecture
 
 ```
-                    ┌─────────────────┐
-                    │   MOTHERSHIP    │
-                    │  Detection &    │
-                    │   Command Node  │
-                    └────────┬────────┘
-                             │
-           ┌─────────────────┼─────────────────┐
-           │                 │                 │
-    ┌──────┴──────┐   ┌──────┴──────┐   ┌──────┴──────┐
-    │ INTERCEPTOR │   │ INTERCEPTOR │   │ INTERCEPTOR │
-    │   SWARM     │   │   SWARM     │   │   SWARM     │
-    │ (Butterfly  │   │ (Butterfly  │   │ (Butterfly  │
-    │  Formation) │   │  Formation) │   │  Formation) │
-    └─────────────┘   └─────────────┘   └─────────────┘
+                         ┌─────────────────┐
+                         │   MOTHERSHIP    │
+                         │    "Queen"      │
+                         │  Detection &    │
+                         │  Command Node   │
+                         └────────┬────────┘
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+       ┌──────┴──────┐     ┌──────┴──────┐     ┌──────┴──────┐
+       │ Lead Pair   │     │ Flank Pair  │     │ Rear Pair   │
+       │  ◆     ◆    │     │  ◆     ◆    │     │  ◆     ◆    │
+       └─────────────┘     └─────────────┘     └─────────────┘
+              
+                      BUTTERFLY FORMATION
 ```
 
 ---
 
-## Simulation Demo
+## Quick Start
 
 ### Installation
 
@@ -83,49 +88,86 @@ cd SQ-7-Hawksgrip
 pip install pygame
 ```
 
-### Run
+### Run Simulation
 
 ```bash
-# Single threat scenario
+# Single threat
 python main.py
 
-# Multi-threat engagement
+# Multi-threat scenario
 python main.py --threats 3
 
 # Stress test
-python main.py --threats 5 --seed 42
+python main.py --threats 5
+
+# Headless mode (no graphics)
+python main.py --headless --threats 3
 ```
+
+### Controls
+
+| Key | Action |
+|-----|--------|
+| ESC | Quit |
 
 ---
 
-## Key Features (v0.1)
+## Scoring System
 
-| Feature | Status |
-|---------|--------|
-| Mothership detection node | ✓ |
-| Butterfly swarm formation | ✓ |
-| Auction-based engagement | ✓ |
-| Lead-pursuit navigation | ✓ |
-| Real-time visualization | ✓ |
-| Performance scoring | ✓ |
+| Event | Points |
+|-------|--------|
+| Successful intercept | +100 |
+| Perfect defense (no breaches) | +100 |
+| Threat breach | -500 |
+| Time (per second) | -0.3 |
+| Extra interceptor used | -20 |
+
+---
+
+## Project Structure
+
+```
+SQ-7-Hawksgrip/
+├── main.py                 # Entry point
+├── config.py               # Configuration
+├── agents/
+│   ├── mothership.py       # Command node
+│   ├── interceptor.py      # Pursuit drones
+│   └── threat.py           # Hostile UAVs
+├── systems/
+│   ├── auction.py          # Bid-based assignment
+│   ├── formation.py        # Butterfly formation
+│   ├── intercept.py        # Pursuit logic
+│   └── scoring.py          # Reward system
+├── environment/
+│   └── world.py            # Simulation space
+├── visualization/
+│   └── renderer.py         # Pygame display
+└── utils/
+    └── math_utils.py       # Vector math
+```
 
 ---
 
 ## Vision 2030 Alignment
 
-This project supports Saudi Arabia's Vision 2030 objectives:
+<p align="center">
+  <img src="https://img.shields.io/badge/🇸🇦-Vision_2030-green.svg">
+</p>
 
-- **Defense Localization** — Domestic manufacturing capability
-- **Technology Transfer** — Saudi engineering teams
-- **Economic Diversification** — Defense export potential
-- **Job Creation** — Technical workforce development
+| Objective | Hawksgrip Contribution |
+|-----------|------------------------|
+| Defense Localization | Domestic manufacturing capability |
+| Technology Transfer | Saudi engineering expertise |
+| Economic Diversification | Defense export potential |
+| Job Creation | Technical workforce development |
 
 ### Target Markets
 
-- National Defense Agencies
-- Critical Infrastructure (Oil, Airports, Power Plants)
-- Government Security
-- GCC Export (UAE, Qatar, African border security)
+- 🛡️ National Defense Agencies
+- 🏭 Critical Infrastructure (Oil, Airports, Power)
+- 🏛️ Government Security
+- 🌍 GCC Export (UAE, Qatar, Africa)
 
 ---
 
@@ -133,10 +175,10 @@ This project supports Saudi Arabia's Vision 2030 objectives:
 
 | Version | Features | Status |
 |---------|----------|--------|
-| v0.1 | Core simulation & visualization | ✓ Complete |
-| v0.2 | Zoom controls, threat waves, speed control | Planned |
-| v0.3 | Evasive threats, mesh resilience | Planned |
-| v1.0 | Hardware-in-the-loop validation | Future |
+| v0.1 | Core simulation, visualization, auction system | ✅ Complete |
+| v0.2 | Zoom controls, threat waves, pause/speed | 🔜 Planned |
+| v0.3 | Evasive threats, mesh resilience | 📋 Planned |
+| v1.0 | Hardware-in-the-loop validation | 🔮 Future |
 
 ---
 
@@ -144,20 +186,23 @@ This project supports Saudi Arabia's Vision 2030 objectives:
 
 > **SQ-7 Hawksgrip: A Distributed AI-Powered Autonomous Counter-UAS Framework with Mesh Coordination and Threat Prioritization**
 >
-> Basil Abdullah Alzahrani  
+> *Basil Abdullah Alzahrani*  
 > Department of Management Information Systems  
-> Al Baha University, Saudi Arabia
+> Al Baha University, Kingdom of Saudi Arabia
 
 ---
 
-## Contact
+## Author
 
-**Basil Abdullah Alzahrani**  
-Founder, TitanGate Inc.
-
-📧 444019967@stu.bu.edu.sa  
-🏛️ Al Baha University  
-🇸🇦 Kingdom of Saudi Arabia
+<p align="center">
+  <strong>Basil Abdullah Alzahrani</strong><br>
+  Founder & Lead Developer<br>
+  <br>
+  <strong>TitanGate Inc.</strong><br>
+  Al Baha, Kingdom of Saudi Arabia<br>
+  <br>
+  📧 444019967@stu.bu.edu.sa
+</p>
 
 ---
 
@@ -168,5 +213,6 @@ Apache License 2.0 — See [LICENSE](LICENSE) for details.
 ---
 
 <p align="center">
-  <strong>حيث يلتقي الإرث العربي بالمستقبل</strong>
+  <strong>حيث يلتقي الإرث العربي بالمستقبل</strong><br>
+  <em>Where the Arabian Legacy Meets the Future</em>
 </p>
