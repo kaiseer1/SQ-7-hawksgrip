@@ -1,7 +1,7 @@
 # SQ-7 Hawksgrip
 
 <p align="center">
-  <img src="logo.png" alt="logo.png" width="400">
+  <img src="logo.png" alt="TitanGate Logo" width="400">
 </p>
 
 <p align="center">
@@ -23,6 +23,18 @@
 **SQ-7 Hawksgrip** — *"The Queen of the High Sky"* — is a distributed autonomous Counter-UAS defense framework designed to protect critical infrastructure against hostile drone threats.
 
 The system employs a coordinated swarm of AI-powered interceptor drones commanded by a persistent airborne mothership node, using auction-based task allocation for optimal threat response.
+
+---
+
+## Demo
+
+<p align="center">
+  <img src="demo.gif" alt="Hawksgrip Simulation Demo" width="600">
+</p>
+
+<p align="center">
+  <em>Real-time interception of multiple hostile drones using auction-based swarm coordination</em>
+</p>
 
 ---
 
@@ -83,8 +95,8 @@ The 2019 Aramco attacks exposed a critical vulnerability: traditional air defens
 ### Installation
 
 ```bash
-git clone https://github.com/kaiseer1/SQ-7-Hawksgrip.git
-cd SQ-7-Hawksgrip
+git clone https://github.com/kaiseer1/SQ-7-hawksgrip.git
+cd SQ-7-hawksgrip
 pip install pygame
 ```
 
@@ -127,7 +139,7 @@ python main.py --headless --threats 3
 ## Project Structure
 
 ```
-SQ-7-Hawksgrip/
+SQ-7-hawksgrip/
 ├── main.py                 # Entry point
 ├── config.py               # Configuration
 ├── agents/
