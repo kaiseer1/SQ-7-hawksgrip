@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  <img src="hawk.png" alt="Hawksgrip" width="300">
+</p>
+
+<p align="center">
   <strong>TitanGate Inc.</strong><br>
   <em>Where the Arabian Legacy Meets the Future</em>
 </p>
