@@ -1,6 +1,3 @@
-"""Hawksgrip v0.1 - Agents Package"""
+"""Hawksgrip v0.1 - Visualization Package"""
 
-from .base_agent import BaseAgent
-from .threat import Threat
-from .mothership import Mothership
-from .interceptor import Interceptor
+from .renderer import Renderer, PYGAME_AVAILABLE
