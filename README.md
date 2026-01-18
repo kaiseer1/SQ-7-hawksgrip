@@ -213,7 +213,7 @@ SQ-7-hawksgrip/
   <strong>TitanGate Inc.</strong><br>
   Al Baha, Kingdom of Saudi Arabia<br>
   <br>
-  📧 444019967@stu.bu.edu.sa
+  📧 abdullahbasil027@gmail.com
 </p>
 
 ---
